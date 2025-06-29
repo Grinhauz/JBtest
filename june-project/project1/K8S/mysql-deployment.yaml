@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,4 +28,35 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: "12345"
         - name: MYSQL_DATABASE
+=======
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.7
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "12345"
+        - name: MYSQL_DATABASE
+>>>>>>> d4b2ef066ccdc6e925df9d51d81f182aeeb5394d
           value: "crypto_db"

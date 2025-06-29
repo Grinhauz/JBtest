@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Service
 metadata:
@@ -10,3 +11,17 @@ spec:
     port: 5001
     targetPort: 5001
   type: ClusterIP
+=======
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol:  TCP
+    port: 5001
+    targetPort: 5001
+  type: ClusterIP
+>>>>>>> d4b2ef066ccdc6e925df9d51d81f182aeeb5394d

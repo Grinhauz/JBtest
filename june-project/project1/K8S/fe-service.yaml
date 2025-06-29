@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Service
 metadata:
@@ -10,3 +11,17 @@ spec:
     port: 5002
     targetPort: 5002
   type: LoadBalancer
+=======
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  selector:
+    app: frontend
+  ports:
+  - protocol:  TCP
+    port: 5002
+    targetPort: 5002
+  Type: LoadBalancer
+>>>>>>> d4b2ef066ccdc6e925df9d51d81f182aeeb5394d
